@@ -1,0 +1,6 @@
+sysbench run --test=cpu --num-threads=1 --max-requests=100000000 --max-time=30
+sysbench run --test=memory --num-threads=1 --max-requests=0 --max-time=15 --memory-total-size=2G --memory-block-size=1K
+
+
+dd if=/dev/zero of=/tmp/bla bs=1M count=512
+dd if=/tmp/bla of=/dev/zero bs=1M count=512
